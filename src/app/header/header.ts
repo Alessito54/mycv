@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
-import {HeaderService} from '../services/header-service/header';
+import { Component, OnInit } from '@angular/core';
+import { HeaderService } from '../services/header-service/header';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-header',
   standalone: false,
   templateUrl: './header.html',
-  styleUrl: './header.css',
+  styleUrls: ['./header.css']
 })
-export class Header {
- constructor(public headerService: HeaderService)
- {
-  console.log(this.headerService);
- }
+export class Header implements OnInit {
+  headerInfo$!: Observable<any>;
+  constructor(public headerService: HeaderService) { }
+
+  ngOnInit() {
+    this.headerInfo$ = this.headerService.getHeader();
+  }
 }

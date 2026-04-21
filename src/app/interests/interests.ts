@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { InterestsService } from '../services/interests-service/interests';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-interests',
   standalone: false,
   templateUrl: './interests.html',
-  styleUrl: './interests.css',
+  styleUrls: ['./interests.css']
 })
-export class Interests {
-
+export class Interests implements OnInit {
+  interests$!: Observable<any[]>;
+  constructor(public interestsService: InterestsService) { }
+  ngOnInit() {
+    this.interests$ = this.interestsService.getInterests();
+  }
 }

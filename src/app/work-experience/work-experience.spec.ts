@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { WorkExperience } from './work-experience';
+import { WorkExperienceService } from '../services/work-experience-service/work-experience';
 
 describe('WorkExperience', () => {
   let component: WorkExperience;
@@ -8,9 +8,10 @@ describe('WorkExperience', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [WorkExperience]
+      declarations: [WorkExperience],
+      providers: [WorkExperienceService]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(WorkExperience);
     component = fixture.componentInstance;

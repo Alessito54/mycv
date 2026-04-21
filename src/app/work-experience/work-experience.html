@@ -1,1 +1,14 @@
-<p>work-experience works!</p>
+<section>
+    <h2>Work Experience</h2>
+    @for (job of workExperience$ | async; track job.puesto) {
+    <div class="job">
+        <h3>{{job.puesto}} en {{job.empresa}}</h3>
+        <p>{{job.periodo}} | {{job.ubicacion}}</p>
+        <ul>
+            @for (logro of job.logros; track logro) {
+            <li>{{logro}}</li>
+            }
+        </ul>
+    </div>
+    }
+</section>

@@ -1,0 +1,14 @@
+.job {
+    margin-bottom: 15px;
+}
+
+.job h3 {
+    font-size: 1em;
+    margin: 0 0 2px 0;
+}
+
+.job p {
+    font-size: 0.85em;
+    color: #777;
+    margin: 0 0 5px 0;
+}

@@ -1,4 +1,8 @@
-<p>header works!</p>
-<p>
- {{headerService.accesoHeader}}
-</p>
+@if (headerInfo$ | async; as info) {
+<header>
+    <img [src]="info.photoUrl" alt="{{info.name}} photo" width="150" />
+    <h1>{{info.name}}</h1>
+    <h2>{{info.role}}</h2>
+    <p>{{info.email}} | {{info.phone}} | {{info.location}}</p>
+</header>
+}

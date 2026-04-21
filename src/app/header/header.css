@@ -1,0 +1,31 @@
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+    font-size: 1.6em;
+    color: #222;
+}
+
+header h2 {
+    margin: 0 0 10px 0;
+    font-weight: normal;
+    color: #666;
+}
+
+header p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #888;
+}

@@ -1,1 +1,8 @@
-<p>languages works!</p>
+<section>
+    <h2>Languages</h2>
+    <ul>
+        @for (lang of languages$ | async; track lang.idioma) {
+        <li>{{lang.idioma}} - {{lang.nivel}}</li>
+        }
+    </ul>
+</section>

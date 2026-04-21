@@ -1,1 +1,9 @@
-<p>education works!</p>
+<section>
+    <h2>Education</h2>
+    @for (edu of education$ | async; track edu.titulo) {
+    <div>
+        <h3>{{edu.institucion}}</h3>
+        <p>{{edu.titulo}} | {{edu.periodo}}</p>
+    </div>
+    }
+</section>

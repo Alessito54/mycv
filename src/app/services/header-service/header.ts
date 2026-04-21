@@ -1,7 +1,15 @@
 import { Injectable } from '@angular/core';
+import { Firestore, doc, docData } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class HeaderService {
- accesoHeader = 'header service running...';
+  constructor(private firestore: Firestore) { }
+
+  getHeader(): Observable<any> {
+    const headerRef = doc(this.firestore, 'header/info');
+    return docData(headerRef);
+  }
 }

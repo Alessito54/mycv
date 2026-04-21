@@ -1,1 +1,8 @@
-<p>certificates works!</p>
+<section>
+    <h2>Certificates</h2>
+    <ul>
+        @for (cert of certificates$ | async; track cert.nombre) {
+        <li>{{cert.nombre}} by {{cert.emisor}} ({{cert.fecha}})</li>
+        }
+    </ul>
+</section>

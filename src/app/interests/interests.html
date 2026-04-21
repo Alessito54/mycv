@@ -1,1 +1,8 @@
-<p>interests works!</p>
+<section>
+    <h2>Interests</h2>
+    <ul>
+        @for (interest of interests$ | async; track interest.actividad) {
+        <li>{{interest.actividad}}</li>
+        }
+    </ul>
+</section>

@@ -10,6 +10,9 @@ import { Skills } from './skills/skills';
 import { Certificates } from './certificates/certificates';
 import { Languages } from './languages/languages';
 import { Interests } from './interests/interests';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,8 @@ import { Interests } from './interests/interests';
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideFirestore(() => getFirestore())
   ],
   bootstrap: [App]
 })

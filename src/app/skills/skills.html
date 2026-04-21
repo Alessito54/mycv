@@ -1,1 +1,11 @@
-<p>skills works!</p>
+<section>
+    <h2>Skills</h2>
+    <ul>
+        @for (skill of skills$ | async; track skill.name) {
+        <li>
+            <span>{{skill.name}}</span>
+            <span class="val">{{skill.percentage}}%</span>
+        </li>
+        }
+    </ul>
+</section>
