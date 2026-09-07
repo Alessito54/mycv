@@ -31,6 +31,7 @@ export interface Certificate {
     nombre: string;
     emisor: string;
     fecha: string;
+    url?: string;
 }
 
 export interface Language {
